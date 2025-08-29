@@ -1,0 +1,96 @@
+@VehicleManagement_HostAddress = https://localhost:7114
+
+### Vehicles
+GET {{VehicleManagement_HostAddress}}/Vehicles
+Accept: application/json
+
+###
+GET {{VehicleManagement_HostAddress}}/Vehicles/1
+Accept: application/json
+
+###
+POST {{VehicleManagement_HostAddress}}/Vehicles
+Content-Type: application/json
+
+{
+  "Id": 3,
+  "Name": "Sample Vehicle",
+  "Description": "Description",
+  "VehicleType": 1
+}
+
+###
+PUT {{VehicleManagement_HostAddress}}/Vehicles/1
+Content-Type: application/json
+
+{
+  "Id": 2,
+  "Name": "Updated Vehicle",
+  "Description": "Updated Description",
+  "VehicleType": "Truck"
+}
+
+###
+DELETE {{VehicleManagement_HostAddress}}/Vehicles/1
+Accept: application/json
+
+###
+
+### Maintenance
+GET {{VehicleManagement_HostAddress}}/Maintenance?vehicleId=1
+Accept: application/json
+
+###
+POST {{VehicleManagement_HostAddress}}/Maintenance
+Content-Type: application/json
+
+{
+  "Id": 1,
+  "VehicleId": 1,
+  "ScheduledDate": "2025-08-28T09:00:00",
+  "IsCompleted": false
+}
+
+###
+
+### Trips
+GET {{VehicleManagement_HostAddress}}/Trips?vehicleId=1
+Accept: application/json
+
+###
+GET {{VehicleManagement_HostAddress}}/Trips/1
+Accept: application/json
+
+###
+POST {{VehicleManagement_HostAddress}}/Trips
+Content-Type: application/json
+
+{
+  "Id": 1,
+  "VehicleId": 1,
+  "StartTime": "2025-08-28T09:00:00",
+  "EndTime": "2025-08-28T11:00:00",
+  "DistanceInKm": 120.5,
+  "SourceLocation": "City A",
+  "DestinationLocation": "City B"
+}
+
+###
+PUT {{VehicleManagement_HostAddress}}/Trips/1
+Content-Type: application/json
+
+{
+  "Id": 1,
+  "VehicleId": 1,
+  "StartTime": "2025-08-28T09:00:00",
+  "EndTime": "2025-08-28T12:00:00",
+  "DistanceInKm": 130.0,
+  "SourceLocation": "City A",
+  "DestinationLocation": "City C"
+}
+
+###
+DELETE {{VehicleManagement_HostAddress}}/Trips/1
+Accept: application/json
+
+###
