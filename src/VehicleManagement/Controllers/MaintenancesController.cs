@@ -6,7 +6,7 @@ namespace VehicleManagement.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class MaintenanceController(IMaintenanceService maintenanceService) : Controller
+    public class MaintenancesController(IMaintenanceService maintenanceService) : Controller
     {       
         private readonly IMaintenanceService _maintenanceService = maintenanceService;
 

@@ -36,12 +36,12 @@ Accept: application/json
 
 ###
 
-### Maintenance
-GET {{VehicleManagement_HostAddress}}/Maintenance?vehicleId=1
+### Maintenances
+GET {{VehicleManagement_HostAddress}}/Maintenances?vehicleId=1
 Accept: application/json
 
 ###
-POST {{VehicleManagement_HostAddress}}/Maintenance
+POST {{VehicleManagement_HostAddress}}/Maintenances
 Content-Type: application/json
 
 {

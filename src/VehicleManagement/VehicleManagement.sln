@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36408.4 d17.14
+VisualStudioVersion = 17.14.36408.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleManagement", "VehicleManagement.csproj", "{BF3DA402-5A41-40CE-88C2-63FA3B9A9FCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleManagement.Tests", "..\VehicleManagement.Tests\VehicleManagement.Tests.csproj", "{9009CFFB-579E-400C-A91E-F9D4F8F13261}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BF3DA402-5A41-40CE-88C2-63FA3B9A9FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF3DA402-5A41-40CE-88C2-63FA3B9A9FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF3DA402-5A41-40CE-88C2-63FA3B9A9FCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9009CFFB-579E-400C-A91E-F9D4F8F13261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9009CFFB-579E-400C-A91E-F9D4F8F13261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9009CFFB-579E-400C-A91E-F9D4F8F13261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9009CFFB-579E-400C-A91E-F9D4F8F13261}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
