@@ -8,6 +8,8 @@ namespace VehicleManagement.DataSource
 
         public DataStore Records { get; set; } = new DataStore();
 
+        private readonly object _saveLock = new();
+
         public void LoadData()
         {
             try
@@ -30,19 +32,21 @@ namespace VehicleManagement.DataSource
 
         public void SaveData()
         {
-            try
+            lock (_saveLock)
             {
-                if (Records != null)
+                try
                 {
-                    var json = JsonConvert.SerializeObject(Records, Formatting.Indented);
-                    using var writer = new StreamWriter(_filePath, false);
-                    writer.Write(json);
+                    if (Records != null)
+                    {
+                        var json = JsonConvert.SerializeObject(Records, Formatting.Indented);
+                        using var writer = new StreamWriter(_filePath, false);
+                        writer.Write(json);
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                // Log or handle exceptions as needed
-                throw new IOException($"Error saving data to {_filePath}: {ex.Message}", ex);
+                catch (Exception ex)
+                {
+                    throw new IOException($"Error saving data to {_filePath}: {ex.Message}", ex);
+                }
             }
         }
     }
